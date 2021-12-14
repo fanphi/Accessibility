@@ -1,9 +1,51 @@
+@mixin for-desktop {
+    @media (min-width: 550px) {
+      @content  
+    }
+}
+
+body{
+    background: linear-gradient(
+   to right, rgb(210, 230, 236), white);
+    color: rgb(6, 6, 85);
+}
 header, footer{
     text-align: center;
+}
+h1, h2, h3{
+    font-family: "Libre Baskerville";
+    font-weight: lighter;
+}
+p, li{
+    font-family: "Lato";
+    font-weight: bold;
 }
 main{
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    @include for-desktop {
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        
+    }
+}
+article{
+    width: 250px;
+    border: 2px solid rgb(6, 6, 85);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+img{
+    width: 200px;
+    height: 70px;
+   
+}
+li{
+    margin-bottom: 5px;
 }
