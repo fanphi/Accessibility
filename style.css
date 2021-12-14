@@ -9,12 +9,12 @@ header, footer {
 }
 
 h1, h2, h3 {
-  font-family: "Libre Baskerville";
+  font-family: "Libre Baskerville", Times, serif;
   font-weight: lighter;
 }
 
-p, li {
-  font-family: "Lato";
+p, li, a {
+  font-family: "Lato", Arial, sans-serif;
   font-weight: bold;
 }
 
@@ -57,12 +57,52 @@ article {
   border-radius: 3px;
 }
 
-img {
+@media (min-width: 550px) {
+  article {
+    border: none;
+  }
+}
+
+.bild1 {
   width: 200px;
-  height: 70px;
+}
+
+.bild2 {
+  width: 200px;
 }
 
 li {
   margin-bottom: 5px;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 550px) {
+  .links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+a {
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+a:visited {
+  color: #060655;
 }
 /*# sourceMappingURL=style.css.map */

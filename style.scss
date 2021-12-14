@@ -13,11 +13,11 @@ header, footer{
     text-align: center;
 }
 h1, h2, h3{
-    font-family: "Libre Baskerville";
+    font-family: "Libre Baskerville", Times, serif;
     font-weight: lighter;
 }
-p, li{
-    font-family: "Lato";
+p, li,a{
+    font-family: "Lato", Arial, sans-serif;
     font-weight: bold;
 }
 main{
@@ -39,13 +39,36 @@ article{
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 3px;
+   @include for-desktop{
+       border: none;
+   }
 }
 
-img{
-    width: 200px;
-    height: 70px;
-   
+.bild1{
+    width: 200px;  
 }
+
+.bild2{
+    width: 200px;
+  
+}
+
 li{
     margin-bottom: 5px;
+}
+
+.links{
+  display: flex;  
+  flex-direction: column;
+  @include for-desktop{
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+}
+a{
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+a:visited{
+    color:rgb(6, 6, 85) ;
 }
